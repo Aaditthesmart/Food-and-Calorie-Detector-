@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food & Calorie Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>🥗 Food & Calorie Detector 🍔</h1>
+    <button onclick="init()">Start Detection</button>
+    <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+    <button onclick="captureSnapshot()">📸 Capture</button>
+    <button onclick="saveToHistory()">📝 Record Detection</button>
+
+    <div id="webcam-container"></div>
+    <div id="loading">Loading model…</div>
+    <div id="final-result"></div>
+    <div id="label-container"></div>
+    <div id="history"><strong>History:</strong></div>
+  </div>
+
+  <!-- TensorFlow.js + Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

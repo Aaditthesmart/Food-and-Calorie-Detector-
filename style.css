@@ -1,0 +1,68 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.dark {
+  background: linear-gradient(135deg, #2c3e50, #4b6cb7);
+  color: white;
+}
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 420px;
+}
+body.dark .card { background: #2c3e50; color: white; }
+h1 { font-size: 1.6rem; margin-bottom: 15px; color: #2c3e50; }
+body.dark h1 { color: #f0f0f0; }
+button {
+  background: #007bff; color: white; border: none;
+  padding: 10px 18px; font-size: 15px; border-radius: 6px;
+  cursor: pointer; margin: 5px;
+}
+button:hover { background: #0056b3; }
+#webcam-container {
+  margin: 15px auto; border: 3px solid #eee; border-radius: 12px;
+  width: 300px; height: 300px; overflow: hidden;
+  display: flex; justify-content: center; align-items: center;
+  background: #fafafa;
+}
+canvas { width: 300px !important; height: 300px !important; }
+#final-result {
+  font-size: 1.2rem; font-weight: bold; margin: 15px 0;
+  padding: 10px; border-radius: 8px; display: none;
+}
+#final-result.healthy {
+  background: #e6f9ee; color: #2e7d32; border: 2px solid #2e7d32;
+}
+#final-result.unhealthy {
+  background: #fdecea; color: #c62828; border: 2px solid #c62828;
+}
+.label { text-align: left; margin: 12px 0; }
+.label span { font-weight: bold; }
+.progress-bar {
+  width: 100%; height: 20px; background: #eee;
+  border-radius: 10px; overflow: hidden;
+}
+.progress {
+  height: 100%; line-height: 20px; color: white;
+  font-size: 12px; text-align: right; padding-right: 6px;
+  border-radius: 10px; transition: width 0.3s;
+}
+.healthy { background: linear-gradient(90deg, #28a745, #6fdc8c); }
+.unhealthy { background: linear-gradient(90deg, #e74c3c, #ff7675); }
+#history {
+  margin-top: 10px; text-align: left;
+  font-size: 14px; max-height: 120px; overflow-y: auto;
+  border-top: 1px solid #ccc; padding-top: 8px;
+}
+#loading {
+  margin-top: 15px; font-weight: bold; color: #333;
+}
